@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Side Timings</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .background {
+            background-image: url('https://raw.githubusercontent.com/ab007shetty/ab007shetty.github.io/master/assets/images/page-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-button {
+            cursor: pointer;
+        }
+
+        .divider {
+            border-top: 2px solid #ffffff; /* Color and thickness of the divider */
+            margin: 20px 0; /* Space around the divider */
+        }
+    </style>
+</head>
+<body class="background h-screen flex flex-col items-center py-8 px-4">
+    <!-- Back Button -->
+    <a href="index.html" class="absolute top-4 left-4 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 focus:outline-none">
+        Back
+    </a>
+
+    <h1 class="text-4xl font-bold text-white mb-8">UDUPI/MANGALORE</h1>
+
+    <!-- Udupi/Belman Section -->
+    <section class="w-full max-w-6xl mb-12">
+        <h2 class="text-3xl font-bold text-yellow-400 mb-6">Udupi/Belman</h2>
+        <div class="flex space-x-4 mb-6">
+            <button class="tab-button py-2 px-4 text-white bg-blue-500 rounded-lg" onclick="showTab('udupi-all')">All</button>
+            <button class="tab-button py-2 px-4 text-white bg-blue-500 rounded-lg" onclick="showTab('udupi-local')">Local</button>
+            <button class="tab-button py-2 px-4 text-white bg-blue-500 rounded-lg" onclick="showTab('udupi-express')">Express</button>
+        </div>
+        <div id="udupi-all" class="tab-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card Example 1 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 301</h3>
+                    <p class="text-gray-100">10:00 AM - 12:00 PM</p>
+                    <p class="text-gray-100">2:00 PM - 4:00 PM</p>
+                    <p class="text-gray-100">6:00 PM - 8:00 PM</p>
+                </div>
+                <!-- Card Example 2 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 302</h3>
+                    <p class="text-gray-100">10:30 AM - 12:30 PM</p>
+                    <p class="text-gray-100">2:30 PM - 4:30 PM</p>
+                    <p class="text-gray-100">6:30 PM - 8:30 PM</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+        <div id="udupi-local" class="tab-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card Example 1 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 311</h3>
+                    <p class="text-gray-100">10:00 AM - 11:00 AM</p>
+                    <p class="text-gray-100">2:00 PM - 3:00 PM</p>
+                    <p class="text-gray-100">6:00 PM - 7:00 PM</p>
+                </div>
+                <!-- Card Example 2 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 312</h3>
+                    <p class="text-gray-100">10:30 AM - 11:30 AM</p>
+                    <p class="text-gray-100">2:30 PM - 3:30 PM</p>
+                    <p class="text-gray-100">6:30 PM - 7:30 PM</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+        <div id="udupi-express" class="tab-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card Example 1 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 321</h3>
+                    <p class="text-gray-100">9:00 AM - 10:00 AM</p>
+                    <p class="text-gray-100">1:00 PM - 2:00 PM</p>
+                    <p class="text-gray-100">5:00 PM - 6:00 PM</p>
+                </div>
+                <!-- Card Example 2 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 322</h3>
+                    <p class="text-gray-100">9:30 AM - 10:30 AM</p>
+                    <p class="text-gray-100">1:30 PM - 2:30 PM</p>
+                    <p class="text-gray-100">5:30 PM - 6:30 PM</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+     <!-- Divider -->
+    <div class="w-full h-1 bg-gray-600 mb-12"></div>
+
+
+    <!-- Mangalore Section -->
+    <section class="w-full max-w-6xl">
+        <h2 class="text-3xl font-bold text-green-400 mb-6">Mangalore</h2>
+        <div class="flex space-x-4 mb-6">
+            <button class="tab-button py-2 px-4 text-white bg-blue-500 rounded-lg" onclick="showTab('mangalore-all')">All</button>
+            <button class="tab-button py-2 px-4 text-white bg-blue-500 rounded-lg" onclick="showTab('mangalore-local')">Local</button>
+            <button class="tab-button py-2 px-4 text-white bg-blue-500 rounded-lg" onclick="showTab('mangalore-express')">Express</button>
+        </div>
+        <div id="mangalore-all" class="tab-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card Example 1 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 401</h3>
+                    <p class="text-gray-100">9:00 AM - 11:00 AM</p>
+                    <p class="text-gray-100">1:00 PM - 3:00 PM</p>
+                    <p class="text-gray-100">5:00 PM - 7:00 PM</p>
+                </div>
+                <!-- Card Example 2 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 402</h3>
+                    <p class="text-gray-100">9:30 AM - 11:30 AM</p>
+                    <p class="text-gray-100">1:30 PM - 3:30 PM</p>
+                    <p class="text-gray-100">5:30 PM - 7:30 PM</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+        <div id="mangalore-local" class="tab-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card Example 1 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 411</h3>
+                    <p class="text-gray-100">10:00 AM - 11:00 AM</p>
+                    <p class="text-gray-100">2:00 PM - 3:00 PM</p>
+                    <p class="text-gray-100">6:00 PM - 7:00 PM</p>
+                </div>
+                <!-- Card Example 2 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 412</h3>
+                    <p class="text-gray-100">10:30 AM - 11:30 AM</p>
+                    <p class="text-gray-100">2:30 PM - 3:30 PM</p>
+                    <p class="text-gray-100">6:30 PM - 7:30 PM</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+        <div id="mangalore-express" class="tab-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card Example 1 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 421</h3>
+                    <p class="text-gray-100">9:00 AM - 10:00 AM</p>
+                    <p class="text-gray-100">1:00 PM - 2:00 PM</p>
+                    <p class="text-gray-100">5:00 PM - 6:00 PM</p>
+                </div>
+                <!-- Card Example 2 -->
+                <div class="bg-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-teal-600">
+                    <h3 class="text-xl font-semibold mb-2">Bus 422</h3>
+                    <p class="text-gray-100">9:30 AM - 10:30 AM</p>
+                    <p class="text-gray-100">1:30 PM - 2:30 PM</p>
+                    <p class="text-gray-100">5:30 PM - 6:30 PM</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for tab functionality -->
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tabContent => {
+                tabContent.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Show the first tab by default
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('udupi-all'); // Default tab for Udupi/Belman
+            showTab('mangalore-all'); // Default tab for Mangalore
+        });
+    </script>
+</body>
+</html>
